@@ -1,0 +1,32 @@
+Moving the bookmark DB to Unicode
+---------------------------------
+
+1.  Add a codepage row to the person table.  This is NULL
+    until the user logs in with the BookmarkSync v1.2 client,
+    and invokes the post_login stored procedure.
+
+2.  Implement the post_login stored procedure.
+    This SP looks like the old motd/motd2 procedures,
+    it takes two parameters, a person ID and a code page.
+    it returns a possibly empty result set of commands
+    that should be sent to the user.
+    It returns 0 if the user should continue to get bookmarks,
+    or non-zero if a *E error message should be sent down.
+
+Now we wait.
+
+Given todays stats:
+   24482    total registrations
+   22802    current registrations
+   17134    have synced
+
+    7589    have synced within the last month
+    7571    have synced and updated the token
+
+    6175    have synced within the last week
+
+email=tway@syncit.com&pass=gabble&contents=
+43
+
+email=tway@syncit.com&pass=gabble
+33

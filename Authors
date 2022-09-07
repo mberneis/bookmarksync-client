@@ -1,0 +1,11 @@
+Author(s):
+	Terence Way <tway@syncit.com>
+    Michael Berneis <mberneis@syncit.com>
+
+The client (this package, BookmarkSync) was primarily written by
+Terence Way.  The server (ASP, PHP) was written mostly by Michael
+Berneis.
+
+Shout Outs To:
+    Donald Way <donaldway@donaldway.com>
+    One of the first in the code, applying <<corrective>> criticism.

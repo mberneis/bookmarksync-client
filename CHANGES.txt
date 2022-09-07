@@ -1,0 +1,18 @@
+###############################################################################
+# BookmarkSync (client-windows)                (c) 1998-200x SyncIT.com, Inc. #
+# CHANGELOG                 http://www.sourceforge.net/projects/bookmarksync/ #
+###############################################################################
+
+1.6.4 (released October 24th, 2003)
+  - added support for Netscape 6 and later, Mozilla and Mozilla Firebird
+  - detecting changed bookmarks file location using "browser.bookmarks.file" in user.js and prefs.js 
+  - added support for UTF-8 encoded bookmarks.html file format
+  - added support for entity encodings in bookmarks.html file (eg. "&quot;")
+  - added Mozilla-specific bookmarks.html I/O class
+  - added support for shared bookmark files (eg. Mozilla & NS using the same bookmarks.html)
+  - refactored browser classes
+  - refactored bookmarks classes
+  - update MSVC 6 and MSVC 7.1 project files
+
+1.4.0 (released September 26th, 2003)
+  - First public release.

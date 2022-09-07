@@ -1,0 +1,2 @@
+1.  Unicode and multiple character sets.
+2.  Re-integrate Opera reading/writing

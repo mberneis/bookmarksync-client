@@ -1,0 +1,533 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+APP_ICON                ICON                    "SyncIT.ico"
+IDI_STALE               ICON                    "SyncStale.ico"
+IDI_CLOSEDSYNC          ICON                    "SyncClosed.ico"
+IDI_LIVE                ICON                    "SyncLive.ico"
+IDI_NEW_FOLDER          ICON                    "newfolder.ico"
+IDI_BOOKMARK            ICON                    "Bookmark.ico"
+IDI_OPEN                ICON                    "FolderOpen.ico"
+IDI_CLOSED              ICON                    "FolderClosed.ico"
+IDI_OPENSYNC            ICON                    "SyncOpen.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""version.rc""\r\n"
+    "#include ""SyncITMsg.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STATUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_REG_INTRO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+    END
+
+    IDD_REG_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_REG_READY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+    END
+
+    IDD_REG_CONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+    END
+
+    IDD_PROXY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_WIZARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_ABOUT_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_MERGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STATUS DIALOG  110, 70, 227, 181
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | 
+    DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SyncIT Status"
+CLASS "SyncItStatus"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Dismiss",ID_STATUS_DISMISS,170,160,50,14
+    EDITTEXT        IDC_STATUS,70,85,145,58,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | NOT WS_TABSTOP
+    LTEXT           "",IDC_STATE,10,15,208,15,SS_CENTERIMAGE
+    RTEXT           "E-mail:",IDC_STATIC,15,55,48,10
+    LTEXT           "",IDC_EMAIL,70,55,140,10
+    RTEXT           "Last Synced:",IDC_STATIC,15,70,48,10
+    LTEXT           "",IDC_SYNCED,70,70,143,10
+    RTEXT           "Additional Info:",IDC_STATIC,15,87,48,8
+    GROUPBOX        "Status Information",IDC_STATIC,7,40,213,110
+END
+
+IDD_REG_INTRO DIALOGEX 0, 0, 280, 172
+STYLE DS_SETFONT | DS_CONTROL | DS_CONTEXTHELP | WS_CHILD | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "BookmarkSync Login - Introduction"
+CLASS "SyncItWizard"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,19,7,58,158
+    CONTROL         132,IDC_STATIC,"Static",SS_BITMAP,75,12,141,20
+    LTEXT           "Step 1 of 4",IDC_STATIC,218,14,44,15
+    LTEXT           "Thank you for using the SyncIT's BookmarkSync!",
+                    IDC_STATIC,96,42,158,11
+    LTEXT           "This wizard will now ask a few questions before connecting to the BookmarkSync service.  These questions need to be answered only once for each computer you install the SyncIT monitor on.\n\nPlease have your E-mail address and registration password ready.",
+                    IDC_MSG0,96,57,158,59
+    CTEXT           "Haven't registered yet?  Forgotten your password?",
+                    IDC_STATIC,96,135,158,9
+    CTEXT           "Go to our web site now:",IDC_STATIC,96,144,158,11
+    CONTROL         "http://syncit.com/common/login.asp",IDC_REGISTER,"Button",
+                    BS_OWNERDRAW | BS_CENTER | BS_TOP | BS_FLAT | WS_TABSTOP,
+                    96,155,158,14
+    LTEXT           "",IDC_MSG,96,57,158,76,NOT WS_VISIBLE
+END
+
+IDD_REG_LOGIN DIALOGEX 0, 0, 280, 172
+STYLE DS_SETFONT | DS_CONTROL | DS_CONTEXTHELP | WS_CHILD | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "BookmarkSync Login - Enter your E-mail address and password"
+CLASS "SyncItWizard"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,19,7,58,158
+    CONTROL         132,IDC_STATIC,"Static",SS_BITMAP,75,12,141,20
+    LTEXT           "Step 2 of 4",IDC_STATIC,218,14,55,15
+    RTEXT           "E-mail:",IDC_STATIC,81,97,33,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_WIZ_EMAIL,120,95,134,14,ES_AUTOHSCROLL
+    RTEXT           "Password:",IDC_STATIC,79,115,35,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_WIZ_PASSWORD,120,114,134,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CTEXT           "Haven't registered yet?  Forgotten your password?",
+                    IDC_STATIC,96,135,158,9
+    CTEXT           "Go to our web site now:",IDC_STATIC,96,144,158,11
+    CONTROL         "http://syncit.com/common/login.asp",IDC_REGISTER,"Button",
+                    BS_OWNERDRAW | BS_CENTER | BS_TOP | BS_FLAT | WS_TABSTOP,
+                    96,155,158,14
+    LTEXT           "",IDC_MSG,96,42,158,42,NOT WS_VISIBLE
+    LTEXT           "Please enter your BookmarkSync login information below.  Please make sure this is the same E-mail address used during your registration.",
+                    IDC_MSG0,96,42,158,31
+END
+
+IDD_REG_READY DIALOGEX 0, 0, 280, 172
+STYLE DS_SETFONT | DS_CONTROL | DS_CONTEXTHELP | WS_CHILD | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "BookmarkSync Login - Ready to connect"
+CLASS "SyncItWizard"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,19,7,58,158
+    CONTROL         132,IDC_STATIC,"Static",SS_BITMAP,75,12,141,20
+    LTEXT           "Step 3 of 4",IDC_STATIC,218,14,55,14
+    LTEXT           "Ready to connect",IDC_STATIC,96,42,158,20
+    LTEXT           "",IDC_MSG,96,54,158,65,NOT WS_VISIBLE
+    LTEXT           "Select &Next when you're ready to continue.  If you are having problems, you may want to adjust the connection settings.",
+                    IDC_STATIC,96,124,158,27
+    CONTROL         "Connection Settings...",IDC_CONNECT_SETTINGS,"Button",
+                    BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,139,153,74,14
+    LTEXT           "BookmarkSync will now connect to our web site.  Your bookmarks will be uploaded to the site.\n\nIf you have a manual dial-up connection to the Internet, please connect now.",
+                    IDC_MSG0,96,65,158,46
+END
+
+IDD_REG_CONNECT DIALOGEX 0, 0, 280, 172
+STYLE DS_SETFONT | DS_CONTROL | DS_CONTEXTHELP | WS_CHILD | WS_CAPTION
+CAPTION "BookmarkSync Login - Connecting"
+CLASS "SyncItWizard"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         134,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN | WS_BORDER,19,7,58,158
+    CONTROL         132,IDC_STATIC,"Static",SS_BITMAP,75,12,141,20
+    LTEXT           "Step 4 of 4",IDC_STATIC,218,14,49,13
+    LTEXT           "Logging into the BookmarkSync web site.",IDC_STATIC,96,
+                    42,158,16
+    LTEXT           "A. Connecting...",IDC_WIZ_CONNECTING,96,64,89,10,
+                    WS_DISABLED
+    LTEXT           "B. Downloading server bookmarks...",IDC_WIZ_DOWNLOADING,
+                    96,85,134,10,WS_DISABLED
+    LTEXT           "C. Uploading local bookmarks...",IDC_WIZ_UPLOADING,96,
+                    106,135,10,WS_DISABLED
+    CONTROL         129,IDC_DONEI,"Static",SS_BITMAP | SS_SUNKEN | NOT 
+                    WS_VISIBLE,88,131,12,11,WS_EX_TRANSPARENT
+    LTEXT           "Done!  The SyncIT bookmark monitor will now appear in your taskbar.  Synchronizing will occur automatically each time you change a bookmark.",
+                    IDC_DONET,106,131,148,33,NOT WS_VISIBLE
+END
+
+IDD_PROXY DIALOG  0, 0, 329, 190
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | 
+    DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BookmarkSync Login to Internet Proxy"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_USERNAME,60,90,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,60,110,90,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "&Save Password",IDC_SAVE,"Button",BS_AUTOCHECKBOX | 
+                    BS_TOP | WS_TABSTOP,15,135,65,10
+    CONTROL         "Continue &automatic synchronizing",IDC_ENABLE_SYNC,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,150,135,10
+    DEFPUSHBUTTON   "OK",ID_PROXY_OK,211,169,50,14
+    PUSHBUTTON      "Cancel",ID_PROXY_CANCEL,272,169,50,14
+    RTEXT           "Username:",IDC_STATIC,15,90,35,15,SS_CENTERIMAGE
+    RTEXT           "Password:",IDC_STATIC,15,110,35,15,SS_CENTERIMAGE
+    GROUPBOX        "Proxy Login",IDC_STATIC,7,75,148,90
+    LTEXT           "A firewall or proxy server is configured to allow you to connect to the Internet.  However, this device requires a login before SyncIT can connect through it to the BookmarkSync service.",
+                    IDC_STATIC,7,7,315,20
+    RTEXT           "Server:",IDC_STATIC,10,43,35,10
+    RTEXT           "Realm:",IDC_STATIC,10,58,35,10
+    LTEXT           "intranet.firewall",IDC_SERVER,55,43,90,10
+    LTEXT           "Internet Proxy",IDC_REALM,55,58,90,10
+    GROUPBOX        "Proxy Information",IDC_STATIC,7,30,148,41
+    GROUPBOX        "",IDC_STATIC,160,30,162,135
+    LTEXT           "If your proxy password doesn't change very often, check the ""Save Password"" box.  SyncIT will remember your password, and avoid this dialog box the next time it restarts.",
+                    IDC_STATIC,165,70,155,35
+    LTEXT           "Select one of the checkboxes near the bottom if this dialog box is shown frequently enough to be annoying.",
+                    IDC_STATIC,165,40,155,25
+    LTEXT           "If your proxy password changes frequently (perhaps because you're using a password device), clear the ""Continue automatic synchronizing"" box.  You must then synchronize manually by using the ""Sync Now!"" popup menu item.",
+                    IDC_STATIC,165,110,155,50
+END
+
+IDD_WIZARD DIALOGEX 0, 0, 280, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | 
+    DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "BookmarkSync Login - Introduction"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "< &Back",IDC_BACK,105,189,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "&Next >",IDC_NEXT,155,189,50,14
+    PUSHBUTTON      "Cancel",ID_WIZ_CANCEL,223,189,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,7,180,
+                    266,1
+END
+
+IDD_ABOUT_BOX DIALOGEX 0, 0, 248, 154
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About SyncIT"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,98,133,50,14
+    CONTROL         101,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN | WS_BORDER,27,14,193,30
+    CTEXT           "V",IDC_VERSION,40,105,167,8
+    CTEXT           "Copyright © 2003, SyncIt.com  Inc.",IDC_STATIC,33,115,
+                    181,8
+    CONTROL         "http://www.syncit.com",ID_HOMEPAGE,"Button",
+                    BS_OWNERDRAW | BS_FLAT | NOT WS_VISIBLE | WS_TABSTOP,72,
+                    89,105,12
+    CTEXT           "BookmarkSync keeps your Netscape bookmarks and Explorer Favorites in sync, even if you use more than one computer.",
+                    IDC_STATIC,22,57,203,21
+END
+
+IDD_MERGE DIALOG  0, 0, 266, 157
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Existing Bookmarks on BookmarkSync"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,209,136,50,14
+    LTEXT           "",IDC_BOOKMARK_COUNT,7,7,252,11
+    LTEXT           "You may choose how these bookmarks are merged with your local bookmarks.",
+                    IDC_STATIC,7,23,252,10
+    LTEXT           "Use this if there are valuable bookmarks already on this computer, and you want them added to your existing BookmarkSync.com bookmarks.",
+                    IDC_STATIC,19,52,240,20
+    LTEXT           "Use this if you want to remove all local bookmarks, replacing them with your BookmarkSync bookmarks.",
+                    IDC_STATIC,19,87,240,18
+    LTEXT           "If you are not sure, leave the box checked and you can remove any extra bookmarks later.",
+                    IDC_STATIC,7,111,252,20
+    CONTROL         "&Merge web site and local bookmarks (recommended)",
+                    IDC_MERGE,"Button",BS_AUTORADIOBUTTON,7,40,252,10
+    CONTROL         "&Overwrite local bookmarks",IDC_MERGE_CLR,"Button",
+                    BS_AUTORADIOBUTTON,7,75,252,10
+END
+
+IDD_PRP_CONNECTION DIALOGEX 0, 0, 236, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTROL | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Connection"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "SyncIT will normally choose the best proxy based on your browser(s) settings.  Sometimes these settings will not be correct.  If you are having problems with SyncIT, you may want to adjust which proxy SyncIT uses to connect to the Internet.",
+                    IDC_STATIC,7,7,222,38
+    GROUPBOX        "Proxy Settings",IDC_STATIC,7,50,222,89
+    LTEXT           "Configuration:",IDC_STATIC,20,67,45,10
+    COMBOBOX        IDC_PROXY_CONFIG,70,65,95,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Address:",IDC_ADDR_LBL,20,88,45,8
+    EDITTEXT        IDC_PROXY_ADDR,70,87,95,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Port:",IDC_PORT_LBL,175,88,16,8
+    EDITTEXT        IDC_PROXY_PORT,195,87,25,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    PUSHBUTTON      "Test",IDC_PROXY_TEST,20,111,35,15
+    LTEXT           "",IDC_TEST_RESULTS,70,110,150,22
+    LTEXT           "Config URL:",IDC_CURL_LBL,20,88,40,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_CONFIG_URL,70,87,150,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_VISIBLE
+END
+
+IDD_PRP_ACCOUNT DIALOGEX 0, 0, 236, 142
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Account"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Account Information",IDC_STATIC,7,7,222,128
+    LTEXT           "E-mail:",IDC_STATIC,20,25,20,8
+    LTEXT           "",IDC_EMAIL,45,25,170,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,20,42,
+                    199,1
+    LTEXT           "If you have a new E-mail address, or you would like to change your password, you can modify your SyncIT account profile:",
+                    IDC_STATIC,20,50,198,16
+    CONTROL         "http://syncit.com/common/profile.asp",IDC_PROFILES,
+                    "Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,47,68,140,
+                    14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,20,85,
+                    199,1
+    LTEXT           "If you would like to use another account's bookmarks, you can temporarily switch accounts:",
+                    IDC_STATIC,20,95,198,18
+    CONTROL         "Change account...",ID_LOGIN,"Button",BS_OWNERDRAW | 
+                    BS_FLAT | WS_TABSTOP,85,113,64,14
+END
+
+IDD_PRP_DISPLAY DIALOG  0, 0, 236, 142
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Display"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Bookmark Menu",IDC_STATIC,7,7,222,79
+    CONTROL         129,IDC_TEST_ICON,"Static",SS_BITMAP | SS_NOTIFY | 
+                    SS_CENTERIMAGE | SS_SUNKEN,181,35,17,15
+    CONTROL         "Show columns on bookmark popup menu",IDC_USE_COLUMNS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,22,171,10
+    LTEXT           "Test here or on the SyncIT taskbar icon:",IDC_STATIC,35,
+                    38,134,11
+    LTEXT           "If the popup menu isn't shown or you can't access your bookmarks despite changing the above settings, you may need to re-organize some bookmarks into folders.",
+                    IDC_STATIC,36,54,179,26
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ABOUT               BITMAP                  "ABOUT256.BMP"
+IDB_ICON                BITMAP                  "icon.bmp"
+IDB_BANNER              BITMAP                  "banner.bmp"
+IDB_FLAG                BITMAP                  "flag.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_POPUP MENU 
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "Sync &Now!",                  ID_POPUP_SYNCNOW
+        MENUITEM "Auto Sync",                   ID_POPUP_AUTOSYNC, CHECKED
+        MENUITEM "&Organize...",                ID_POPUP_ORGANIZE
+        MENUITEM SEPARATOR
+        MENUITEM "&Status...",                  ID_POPUP_STATUS
+        MENUITEM "S&ettings...",                ID_POPUP_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&About SyncIT...",            ID_POPUP_ABOUT
+        MENUITEM "&Help...",                    ID_POPUP_HELP
+        MENUITEM "E&xit",                       ID_POPUP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND                CURSOR                  "Hand-l.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_CANNOT_START        "One of the necessary Windows system routines failed during initialization.  As a result, SyncIT cannot start.  This is most likely due to a lack of resources (memory, disk space) on this machine.\n\nRecommended actions include re-installing the SyncIT service, or E-mailing the following information to support@bookmarksync.com.\n\nError: %1"
+    IDS_HOSTNAME_ERR        "The SyncIT service cannot locate %1.\n%2\nAre you connected to the Internet?  Set the proxy settings or establish a connection manually before retrying."
+    IDS_SOCKET_ERR          "The connection to %1 was interrupted by an error.\n%2"
+    IDS_CONNECT_ERR         "The SyncIT service cannot connect to %1.\n%2\n\nAre you connected to the Internet?  Set the proxy settings or establish a connection manually before retrying."
+    IDS_STOPPING_WIN32      "One of the Windows system routines necessary for proper SyncIT operation has failed.  As a result, SyncIT is stopping.  This is most likely due to a lack of resources (memory, disk space) on this machine.\n\nRecommended actions include re-installing the SyncIT service, or E-mailing the following information to support@bookmarksync.com.\n\nError: %1"
+    IDS_RUNNING             "The SyncIT service is running."
+    IDS_BAD_RESPONSE        "The SyncIT service cannot connect to %1.  The server sent back a bad response.\nThe most likely explanation of this error is that the web server is too busy.\n\nBad response: %2"
+    IDS_HTTP_RESPONSE       "The SyncIT service cannot connect to %1.  The server sent back a bad HTTP response.\nThe most likely explanations of this error are either your proxy cannot connect to the BookmarkSync web server, or the web server is too busy.\n\nResponse: %2"
+    IDS_UNKNOWN_EMAIL       "There was a problem with the E-mail address.\n\nEither your E-mail address hasn't been registered yet or the E-mail address shown is incorrect."
+    IDS_UNKNOWN_PASS        "There was a problem with the password - the entered password doesn't match the one recorded for you in our files.  Have SyncIT E-mail your password to you if you need to recover it."
+    IDS_RETRY               "Server busy... Retrying shortly."
+    IDS_SERVER_ERROR        "The SyncIT service cannot synchronize with www.bookmarksync.com.  The server sent back a bad response.\n\nResponse: %1"
+    IDS_TEMPORARY_ERROR     "A temporary error is preventing immediate synchronization.  The agent will continue trying to synchronize."
+    IDS_TIP_DOWNLOAD        "SyncIT: Attempting Download"
+    IDS_TIP_TEMPERR         "SyncIT: Offline"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TIP_UPLOAD          "SyncIT: Attempting Upload"
+    IDS_TIP_RETRY           "SyncIT: Retrying Upload"
+    IDS_TIP_SYNCING         "SyncIT: Syncing"
+    IDS_TIP_LAST_SYNCED     "SyncIT: Last synced %1"
+    IDS_STATE_DOWNLOAD      "Attempting login..."
+    IDS_STATE_TEMPERR       "Offline.  Retrying..."
+    IDS_LOGIN_ERR           "SyncIT encountered a problem when logging into bookmarksync.com.  The most likely reason for this problem is a recent password change.\n\nThis wizard will prompt you for corrections to your E-mail address and Bookmark password.  Verify that this information is correct before reconnecting."
+    IDS_NO_ERROR            "The SyncIT service is running normally."
+    IDS_BOOKMARK_COUNT      "You have %d bookmarks on the BookmarkSync web site."
+    IDS_PROXY_AUTO          "Automatic Proxy Settings"
+    IDS_PROXY_HTTP          "Custom HTTP Proxy"
+    IDS_PROXY_SOCKS         "Custom SOCKS Proxy"
+    IDS_PROXY_WININET       "Windows Internet API"
+    IDS_PROXY_DIRECT        "Direct Connection"
+    IDS_PROXY_IE            "Internet Explorer"
+    IDS_PROXY_NS            "Netscape"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SETTINGS_CAPTION    "BookmarkSync Settings"
+    IDS_APP_UUID            "SyncIt-27a58c22-3dff-11d2-937a-3c0000000000"
+    IDS_STATUS_CAPTION      "SyncIT Status"
+    IDS_REG_KEY             "Software\\SyncIT\\BookmarkSync"
+    IDS_FINISH              "&Finish"
+    IDS_NEXT                "&Next >"
+    IDS_TESTING             "Testing..."
+    IDS_INVALID_SETTINGS    "Invalid settings"
+    IDS_STOPPING_IMPORT     "One of the necessary Windows system routines failed during import operation.\n\nError: %1"
+    IDS_NO_PROFILES         "There are no AOL profiles in the specified directory.  Click OK to choose another directory."
+    IDS_DIR_ERR             "The Import Wizard could not find the directory '%s' \n%s\n\nClick OK to choose another directory."
+    IDS_AOL_FILE_ERR        "The Import Wizard could not access file '%s' to see if it's an AOL profile.\nError: %s\n\nClick Abort to choose another directory, Retry to attempt to access the file again, or Ignore to skip this file."
+    IDS_FILE_ERR            "The Import Wizard could not open the file '%s' \n%s\n\nClick OK to choose another file."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "version.rc"
+#include "SyncITMsg.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
